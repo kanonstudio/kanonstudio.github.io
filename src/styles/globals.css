@@ -1,0 +1,157 @@
+/* Dark Theme */
+[data-bs-theme="dark"] {
+  --bs-body-color: var(--bs-white);
+  --bs-body-bg: var(--bs-black);
+  --bs-border-color: var(--bs-gray-800);
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: var(--bs-primary-hover);
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-dark);
+  --bs-btn-border-color: var(--bs-gray-700);
+  --bs-btn-hover-bg: var(--bs-gray-800);
+  --bs-btn-hover-border-color: var(--bs-gray-600);
+  --bs-btn-focus-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  --bs-table-color: var(--bs-white);
+  --bs-table-bg: var(--bs-gray-900);
+  --bs-table-border-color: var(--bs-gray-700);
+  --bs-table-striped-bg: var(--bs-gray-800);
+  --bs-table-striped-color: var(--bs-white);
+  --bs-table-hover-bg: var(--bs-gray-700);
+  --bs-table-hover-color: var(--bs-white);
+  --bs-tooltip-color: var(--bs-black);
+  --bs-tooltip-bg: var(--bs-white);
+  --bs-tooltip-border-color: var(--bs-gray-700);
+  --bs-tooltip-arrow-color: var(--bs-white);
+}
+
+[data-bs-theme="dark"] .carousel-control-prev-icon,
+[data-bs-theme="dark"] .carousel-control-next-icon {
+  filter: none !important;
+}
+[data-bs-theme="dark"] .carousel-indicators [data-bs-target] {
+  background-color: var(
+    --bs-white
+  ) !important; /* Indicator dots in a neutral gray */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.site-logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 0.5em;
+}
+
+/* Banner Section */
+.carousel-item {
+  min-height: 100vh;
+}
+
+/* About Section */
+.author-img {
+  max-height: 70vh !important;
+}
+
+.call-now-btn {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  width: 60%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.qr-code {
+  width: 200px;
+}
+
+/* Recent Artworks */
+.react-photo-album--image {
+  border: 1px solid white;
+  aspect-ratio: auto 4/3;
+}
+
+/* Category Section */
+
+@media (min-width: 992px) {
+  .accordion-body .yarl__root {
+    width: 65%;
+    min-width: none;
+  }
+  .accordion-body .yarl__slide_image {
+    object-fit: contain;
+  }
+}
+
+/* Recent Blog Post Section  */
+.post-avatar {
+  height: 150px;
+}
+
+.blog-post {
+  background-color: #ddd;
+}
+
+.blog-post-list > *:last-child {
+  margin: 0;
+}
+
+.post-author {
+  color: rgb(152, 153, 150);
+}
+
+.blog-post-background {
+  background-image: radial-gradient(
+    rgb(221, 164, 41) 0.6px,
+    rgb(238, 238, 222) 0.5px
+  );
+  background-size: 10px 10px;
+}
+
+.blog-header {
+  background-image: url("/images/author.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  /* text-shadow: 1px 1px 4px #000; */
+}
+
+.text-outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.custom-slide-image {
+  max-height: auto;
+}
+
+.post-content {
+  min-height: auto !important;
+  color: #000;
+}
+
+.light-black {
+  background-color: #111111;
+}
+
+.author-text {
+  color: #41464c;
+}

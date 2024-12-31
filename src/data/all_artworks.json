@@ -1,0 +1,75 @@
+[
+  {
+    "id": "1",
+    "image": "the_astronomer.jpg",
+    "title": "The Astronomer",
+    "subtitle": "(copy work of Johnas Vermeer's painting)",
+    "artType": "Oil on canvas",
+    "artSize": "40\" × 42\"",
+    "category": "Copy Work"
+  },
+  {
+    "id": "2",
+    "image": "landscape.jpg",
+    "title": "Landscape",
+    "artType": "Oil on canvas",
+    "artSize": "24\" × 30\"",
+    "category": "Landscape"
+  },
+  {
+    "id": "3",
+    "image": "self_portrait_3.jpg",
+    "title": "Self Portrait - 3",
+    "artType": "Acrylic on canvas",
+    "artSize": "24\" × 30\"",
+    "category": "Portrait"
+  },
+  {
+    "id": "4",
+    "image": "mahanayak.jpg",
+    "title": "মহানায়ক",
+    "artType": "Acrylic on canvas",
+    "artSize": "45\" × 48\"",
+    "category": "Political"
+  },
+  {
+    "id": "5",
+    "image": "rhythm.jpg",
+    "title": "Rhythm",
+    "artType": "Oil on paper",
+    "artSize": "24\" × 30\"",
+    "category": "Abstract"
+  },
+  {
+    "id": "6",
+    "image": "landscape_2.jpg",
+    "title": "Landscape - 2",
+    "artType": "Oil on paper",
+    "artSize": "22\" × 32\"",
+    "category": "Landscape"
+  },
+  {
+    "id": "7",
+    "image": "supper.jpg",
+    "title": "Supper",
+    "artType": "Oil on canvas",
+    "artSize": "48\" × 30\"",
+    "category": "Mural Paiting"
+  },
+  {
+    "id": "8",
+    "image": "martyrs.jpg",
+    "title": "Martyrs",
+    "artType": "Pen on paper",
+    "artSize": "6.5\" × 10\"",
+    "category": "Sketch"
+  },
+  {
+    "id": "9",
+    "image": "childhood.jpg",
+    "title": "Childhood",
+    "artType": "Watercolour on paper",
+    "artSize": "22\" × 16\"",
+    "category": "Portrait"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "name": "art-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "serve": "npx serve@latest out"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "date-fns": "^4.1.0",
+    "github-markdown-css": "^5.8.0",
+    "gray-matter": "^4.0.3",
+    "image-size": "^1.1.1",
+    "marked": "^15.0.2",
+    "next": "^15.0.3",
+    "random": "^5.1.1",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.3.1",
+    "react-photo-album": "^3.0.2",
+    "sharp": "^0.33.5",
+    "yet-another-react-lightbox": "^3.21.6"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.0.3",
+    "eslint-plugin-import": "^2.31.0",
+    "typescript": "^5"
+  }
+}
