@@ -96,6 +96,11 @@ const CategoryPage = ({
             else if (containerWidth < 576 && containerWidth < 768) return 3;
             return 4;
           }}
+          render={{
+            image: (props) => (
+              <img src={props.src} alt={props.title} className="w-100 h-auto" />
+            ),
+          }}
         />
         <Lightbox
           slides={artworks}

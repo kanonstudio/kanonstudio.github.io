@@ -2,14 +2,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { useState } from "react";
-import { MasonryPhotoAlbum } from "react-photo-album";
-import Lightbox from "yet-another-react-lightbox";
 
 import Header from "@/ui/templates/header/Header";
 import Footer from "@/ui/templates/footer/Footer";
 import { allArtworkSlides } from "@/components/Global";
 import { InferGetStaticPropsType } from "next";
 import Link from "next/link";
+import PhotoGallery from "@/components/custom/PhotoGallery";
 
 export const ImageWithPlaceholder = ({
   image,
@@ -99,32 +98,7 @@ const GalleryPage = ({
     <GalleryPageLayout title="Artwork Gallery">
       <GalleryPageBreadCrumb />
       <h3 className="text-center py-2">Artwork Gallery</h3>
-      <MasonryPhotoAlbum
-        photos={allArtworks}
-        onClick={({ index }) => setIndex(index)}
-      />
-      <Lightbox
-        slides={allArtworks}
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
-        // render={{
-        //   slide: ({ slide }: { slide: Slide }) => {
-        //     const slideImage: SlideImage = slide as SlideImage;
-        //     return (
-        //       <div className="d-flex flex-column flex-fill h-100">
-        //         <h3 className="text-left">{slide.title}</h3>
-        //         <div className="d-flex mx-auto">
-        //           <ImageWithPlaceholder
-        //             image={slideImage.src}
-        //             //thumbnail={slideImage.thumbnail || "/assets/whatsapp.png"}
-        //           />
-        //         </div>
-        //       </div>
-        //     );
-        //   },
-        // }}
-      />
+      <PhotoGallery photos={allArtworks} index={index} setIndex={setIndex} />
     </GalleryPageLayout>
   );
 };

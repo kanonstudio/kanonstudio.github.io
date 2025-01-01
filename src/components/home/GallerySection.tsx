@@ -16,7 +16,7 @@ const RecentGallery = ({
   const [index, setIndex] = useState(-1);
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto m-4">
       <MasonryPhotoAlbum
         photos={recentArtworks}
         onClick={({ index }) => setIndex(index)}
@@ -24,6 +24,11 @@ const RecentGallery = ({
           if (containerWidth <= 576) return 1;
           if (containerWidth <= 768) return 3;
           return 4;
+        }}
+        render={{
+          image: (props) => (
+            <img src={props.src} alt={props.title} className="w-100 h-auto" />
+          ),
         }}
       />
       <Lightbox
