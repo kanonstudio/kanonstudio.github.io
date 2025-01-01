@@ -54,7 +54,8 @@ body {
 
 /* About Section */
 .author-img {
-  max-height: 70vh !important;
+/* max-height: 70vh !important; */
+  width: 100%;
 }
 
 .call-now-btn {
