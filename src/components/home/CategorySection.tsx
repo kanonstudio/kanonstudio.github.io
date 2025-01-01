@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
+import Lightbox, { Slide, SlideImage } from "yet-another-react-lightbox";
 import {
   Captions,
   Counter,
@@ -39,19 +39,29 @@ export const ArtGallery = ({ artworks }: { artworks: ArtworkImage[] }) => {
             margin: "0 auto",
           },
         }}
-        // render={{
-        //   slide: ({ slide }: { slide: Slide }) => {
-        //     const slideImage: SlideImage = slide as SlideImage;
-        //     return (
-        //       <div className="d-flex flex-column flex-fill">
-        //         <h3 className="text-left">{slide.title}</h3>
-        //         <div className="d-flex mx-auto">
-        //           <img src={slideImage.srcSet![0].src} alt="" className="w-50 mx-auto"/>
-        //         </div>
-        //       </div>
-        //     );
-        //   },
-        // }}
+        render={{
+          slide: ({ slide }: { slide: Slide }) => {
+            const slideImage: SlideImage = slide as SlideImage;
+            return (
+              <img
+                src={slideImage.src}
+                alt=""
+                className=""
+                onClick={(event) => {
+                  event.stopPropagation(); // Prevent propagation issues
+                  setOpenState(true); // Open the modal
+                }}
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "center",
+                  width: "100%",
+                  height: "100%",
+                  margin: "0 auto",
+                }}
+              />
+            );
+          },
+        }}
       />
       <Lightbox
         slides={artworks}
