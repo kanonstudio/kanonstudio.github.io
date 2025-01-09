@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
   const { id } = context.params!;
-  const post: BlogPost = blogPosts[Number(id) - 1];
+  const post: BlogPost = blogPosts.find((post) => post.id === id) || blogPosts[0];
 
   return {
     props: {
@@ -62,7 +62,15 @@ export const BlogPostSection = ({
   return (
     <div className="col-lg-8 me-lg-4 mb-4 mb-lg-0">
       <div className="border rounded blog-post-background text-black">
-        <div className="blog-header p-2 rounded bg-black">
+        <div className="blog-header p-2 rounded bg-black"
+        style={
+          {
+            backgroundImage: `url(${post.cover_picture || "/images/author.jpg"})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }
+        }>
           <h1 className="p-0 m-0 fw-bolder text-outline">{post.title}</h1>
           <div className="text-secondary d-flex flex-column">
             <a
@@ -105,7 +113,7 @@ export const OtherSection = ({ blogPosts }: { blogPosts: BlogPost[] }) => {
                 key={index}
                 className="list-group-item p-4 py-2 bg-transparent"
               >
-                <a href={`/blog/${post.id}`}>{post.title}</a>
+                <a href={`/blog/post/${post.id}`}>{post.title}</a>
               </div>
             );
           })}

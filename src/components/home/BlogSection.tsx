@@ -17,13 +17,13 @@ const BlogPostView = ({ post }: { post: BlogPost }) => {
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">{post.title}</h5>
         {/* <h6 className="card-subtitle">{post.subtitle}</h6> */}
-        <small className="card-title">{post.author} - <HumanizeTime timestamp={post.timestamps}/></small>
+        <small className="card-title">{post.author} - <HumanizeTime timestamp={post.timestamp}/></small>
         <p className="card-text flex-fill">
           {stripMarkdown(post.content.split(" ").splice(0, 32).join(" "))}
         </p>
         <div>
           <Link
-            href={"/blog/" + post.id}
+            href={"/blog/post/" + post.id}
             className="btn bg-dark border-light"
           >
             Continue Reading

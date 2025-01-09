@@ -3,7 +3,6 @@ title: "Testing"
 author: "Masfikur Rahman"
 author_link: "https://facebook.com/mdmasfikur"
 cover_picture: "https://picsum.photos/id/8/5000/3333"
-tags: "Literature,"
 timestamp: 1733828197
 ---
 

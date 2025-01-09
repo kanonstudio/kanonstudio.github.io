@@ -34,13 +34,13 @@ export const BlogPostView = ({ post }: { post: BlogPost }) => {
         <h5 className="card-title">{post.title}</h5>
         <h6 className="card-subtitle">{post.subtitle}</h6>
         <small className="card-title">
-          {post.author} - <HumanizeTime timestamp={post.timestamps} />
+          {post.author} - <HumanizeTime timestamp={post.timestamp} />
         </small>
         <p className="card-text flex-fill">
           {stripMarkdown(post.content.split(" ").splice(0, 32).join(" "))}
         </p>
         <div>
-          <Link href={"/blog/" + post.id} className="btn bg-dark border-light">
+          <Link href={"/blog/post/" + post.id} className="btn bg-dark border-light">
             Continue Reading
           </Link>
         </div>

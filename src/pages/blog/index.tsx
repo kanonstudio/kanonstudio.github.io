@@ -47,7 +47,7 @@ const Blog = ({
         <h1 className="text-center">Blog Posts</h1>
         <div className="list-group list-group-numbered">
         {blogPosts.map((post) => {
-          return <div key={post.id} className="list-group-item"><Link href={'/blog/'+post.id} className="text-decoration-none">{post.title}</Link> - {post.author}</div>;
+          return <div key={post.id} className="list-group-item"><Link href={'/blog/post/'+post.id} className="text-decoration-none">{post.title}</Link> - {post.author}</div>;
         })}
         </div>
       </div>

@@ -1,10 +1,10 @@
 export default interface BlogPost {
-  id?: number;
+  id?: string;
   title: string;
   subtitle?: string;
   author?: string;
   author_link?: string;
   content: string;
   cover_picture?: string;
-  timestamps: number;
+  timestamp: number;
 }
