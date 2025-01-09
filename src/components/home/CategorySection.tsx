@@ -39,6 +39,7 @@ export const ArtGallery = ({ artworks }: { artworks: ArtworkImage[] }) => {
             margin: "0 auto",
           },
         }}
+      
         render={{
           slide: ({ slide }: { slide: Slide }) => {
             const slideImage: SlideImage = slide as SlideImage;
@@ -71,6 +72,7 @@ export const ArtGallery = ({ artworks }: { artworks: ArtworkImage[] }) => {
         captions={{ descriptionTextAlign: "center" }}
         // enable optional lightbox plugins
         plugins={[Captions, Zoom, Counter]}
+        counter={{ container: { style: { top: "unset", bottom: 0 } } }}
       />
     </div>
   );
@@ -107,16 +109,16 @@ const CategoryList = ({
               className="accordion-collapse collapse"
               data-bs-parent="#categoryAccordion"
             >
-              <div className="accordion-body">
+              <div className="accordion-body px-0">
                 <ArtGallery artworks={artworks} />
               </div>
-              {artworks.length > 0 ? (
-                <div className="">
+              {artworks.length > 3 ? (
+                <div className="border-top bg-black text-white text-center text-decoration-none p-2 d-block fs-5">
                   <Link
                     href={`/gallery/category/${category}`}
-                    className="border-top bg-black text-white text-center text-decoration-none p-2 d-block fs-5"
+                    className="btn btn-dark border border-white px-4"
                   >
-                    <small>More...</small>
+                    View More...
                   </Link>
                 </div>
               ) : (

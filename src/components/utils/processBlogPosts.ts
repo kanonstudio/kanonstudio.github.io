@@ -19,7 +19,6 @@ export default function processBlogPosts() {
     const fileContent = fs.readFileSync(blogFilePath);
     const { data, content } = matter(fileContent);
 
-    const stats = fs.statSync(blogFilePath);
 
     const post: BlogPost = {
       id: index + 1,
@@ -29,7 +28,7 @@ export default function processBlogPosts() {
       author_link: data.author_link || "/about",
       cover_picture: data.cover_picture || null,
       content: content,
-      timestamps: stats.birthtime.getTime() || Date.now(),
+      timestamps: (data.timestamp as number) * 1000 || Date.now(),
     };
     blogPosts.push(post);
   });

@@ -16,7 +16,7 @@ const BlogPostView = ({ post }: { post: BlogPost }) => {
       />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">{post.title}</h5>
-        <h6 className="card-subtitle">{post.subtitle}</h6>
+        {/* <h6 className="card-subtitle">{post.subtitle}</h6> */}
         <small className="card-title">{post.author} - <HumanizeTime timestamp={post.timestamps}/></small>
         <p className="card-text flex-fill">
           {stripMarkdown(post.content.split(" ").splice(0, 32).join(" "))}

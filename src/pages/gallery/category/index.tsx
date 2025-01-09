@@ -60,17 +60,27 @@ const ArtworkGalleryPage = ({
                 className="list-group-item mx-auto border rounded m-2"
               >
                 <div
-                  className="d-flex mx-auto"
+                  className="d-flex mx-auto rounded"
                   style={{
                     backgroundImage: "url(" + thumbnail.src + ")",
                     backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
 
                     width: "200px",
                     height: "200px",
                   }}
                 >
-                  <div className="mx-auto my-auto">{category}</div>
+                  <div
+                    className="mx-auto my-auto"
+                    style={{
+                      textShadow: "1px 1px 1px black",
+                      color: "white",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {category}
+                  </div>
                 </div>
               </a>
             );

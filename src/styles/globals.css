@@ -93,12 +93,20 @@ body {
 
 @media (min-width: 992px) {
   .accordion-body .yarl__root {
-    width: 65%;
+    width: 67%;
     min-width: none;
   }
   .accordion-body .yarl__slide_image {
     object-fit: contain;
   }
+}
+
+.accordion-body .yarl__button {
+  padding: 0.5em;
+}
+.accordion-body .yarl__button > .yarl__icon {
+  border: 1px solid #626060;
+  border-radius:5px ;
 }
 
 /* Recent Blog Post Section  */
@@ -155,4 +163,9 @@ body {
 
 .author-text {
   color: #41464c;
+}
+
+
+.breadcrumb-item > a {
+  text-decoration: none;
 }

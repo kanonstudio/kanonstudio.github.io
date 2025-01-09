@@ -97,8 +97,13 @@ const GalleryPage = ({
   return (
     <GalleryPageLayout title="Artwork Gallery">
       <GalleryPageBreadCrumb />
-      <h3 className="text-center py-2">Artwork Gallery</h3>
-      <PhotoGallery photos={allArtworks} index={index} setIndex={setIndex} />
+      <div className="container my-4">
+        <h3 className="text-center py-2">Artwork Gallery</h3>
+        <PhotoGallery photos={allArtworks} index={index} setIndex={setIndex} />
+      </div>
+      <div className="text-center my-4">
+        <Link href="/gallery/category" className="text-decoration-none btn btn-dark"> View All Categories </Link>
+      </div>
     </GalleryPageLayout>
   );
 };
